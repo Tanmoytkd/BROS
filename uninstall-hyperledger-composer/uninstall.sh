@@ -18,7 +18,7 @@ rm -rf ~/.fabric-tools
 read -p "Do you want to remove all docker images of Hyperledger Fabric? (Y/n) " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    docker kill $(docker ps -q);;
-	docker rm $(docker ps -aq);;
-    docker rmi $(docker images dev-* -q);;
+    docker kill $(docker ps -q)
+	docker rm $(docker ps -aq)
+    docker rmi $(docker images dev-* -q)
 fi
